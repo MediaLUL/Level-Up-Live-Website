@@ -58,6 +58,16 @@ document.addEventListener('DOMContentLoaded', function() {
     handleNavbarScroll(); // Run on load
 });
 
+// Hero Text Fade Out
+document.addEventListener('DOMContentLoaded', () => {
+    const heroContainer = document.querySelector('.hero-container');
+    
+    // Wait 7 seconds then fade out
+    setTimeout(() => {
+        heroContainer.classList.add('fade-out');
+    }, 7000);
+});
+
 // Carousel functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all carousels
