@@ -76,9 +76,10 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 8px;
     align-items: center;
-    flex-wrap: wrap;
+    margin-right: 10px;
+    z-index: 1000;
 }
 
 .nav-menu a,
@@ -117,11 +118,14 @@ body {
 .nav-cta {
     background: linear-gradient(45deg, #00ff00, #00cc00);
     color: #ffffff !important;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 25px;
     font-weight: 600;
     text-shadow: none !important;
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    display: inline-block;
+    margin: 2px;
+    text-decoration: none;
 }
 
 .nav-cta:hover {
@@ -1483,6 +1487,9 @@ body {
 
     .nav-menu.active {
         left: 0;
+        display: flex;
+        flex-direction: column;
+        background: rgba(20,24,32,0.92) !important;
     }
 
     .hero-title {
@@ -2651,6 +2658,143 @@ body {
         font-size: 1rem;
     }
 } 
+
+/* Locations Section */
+.locations {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.locations .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #23283a 0%, #00ff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+.locations .section-header h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #00ccff !important;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.location-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.location-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.location-info {
+    padding: 20px;
+}
+
+.location-info h4 {
+    font-size: 1.3rem;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.location-info p {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Profitability Table */
+.profitability-section {
+    margin-top: 60px;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 20px;
+}
+
+.profitability-section h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333333;
+    font-size: 1.8rem;
+}
+
+.profitability-table {
+    overflow-x: auto;
+}
+
+.profitability-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.profitability-table th,
+.profitability-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.profitability-table th {
+    background: #00ff00;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.profitability-table tr:hover {
+    background: rgba(0, 255, 0, 0.05);
+}
+
+.profitability-table td {
+    color: #333333;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .profitability-section {
+        padding: 20px;
+        margin: 30px 10px;
+    }
+
+    .profitability-table th,
+    .profitability-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
 
 /* The Moment is NOW Section */
 .moment-now {
